@@ -1,0 +1,23 @@
+div.mdc-card h1,
+div.mdc-card h2,
+div.mdc-card h3,
+div.mdc-card h4,
+div.mdc-card h5,
+div.mdc-card h6,
+div.mdc-card p {
+    padding-left: 16px;
+}
+
+div.mdc-card {
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+i.fab {
+    font-size: 1.5em;
+}
+
+img.headshot {
+    width: 100%;
+    height: auto;
+}

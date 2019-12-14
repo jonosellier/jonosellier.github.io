@@ -5,14 +5,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/64cdcf2b31.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="w3-light-grey">
-    <div class="w3-third">
-        main navigation here
-    </div>
-    <div class="w3-twothird">
-        other stuff
+    <div class="w3-row-padding">
+        <div class="w3-third">
+            <div class="mdc-card">
+                <img class="headshot" src="media/headshot-cropped.png">
+                <h1>Jonathan Sellier</h1>
+                <ul class="mdc-list">
+                    <li class="mdc-list-item" tabindex="0">
+                        <span class="mdc-list-item__graphic material-icons" aria-hidden="true">email</span>
+                        <span class="mdc-list-item__text">jonosellier@gmail.com</span>
+                    </li>
+                    <li class="mdc-list-item" tabindex="0">
+                        <span class="mdc-list-item__graphic material-icons" aria-hidden="true">phone</span>
+                        <span class="mdc-list-item__text">813-679-7471</span>
+                    </li>
+                    <li class="mdc-list-item" tabindex="0">
+                        <span class="mdc-list-item__graphic" aria-hidden="true"><i class="fab fa-github"></i></span>
+                        <span class="mdc-list-item__text">jonosellier</span>
+                    </li>
+                    <li class="mdc-list-item" tabindex="0">
+                        <span class="mdc-list-item__graphic" aria-hidden="true"><i class="fab fa-linkedin"></i></span>
+                        <span class="mdc-list-item__text">jonosellier</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="mdc-card">
+                <h2><i class="material-icons">school</i> Education</h2>
+                <ul class="mdc-list mdc-list--two-line">
+                    <li class="mdc-list-item" tabindex="0">
+                        <span class="mdc-list-item__text">
+                                      <span class="mdc-list-item__primary-text">University of Trinidad and Tobago</span>
+                        <span class="mdc-list-item__secondary-text">2013-2015 - Diploma in Software Engineering</span>
+                        </span>
+                    </li>
+                    <li class="mdc-list-item" tabindex="0">
+                        <span class="mdc-list-item__text">
+                                          <span class="mdc-list-item__primary-text">Hillsborough Community College</span>
+                        <span class="mdc-list-item__secondary-text">2016-2017 - Associate of Arts in Computer Science</span>
+                        </span>
+                    </li>
+                    <li class="mdc-list-item" tabindex="0">
+                        <span class="mdc-list-item__text">
+                                              <span class="mdc-list-item__primary-text">University of South Florida</span>
+                        <span class="mdc-list-item__secondary-text">2017-2020 - Bachelor of Engineering in Computer Science</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="mdc-card">
+                <h2><i class="material-icons">work</i> Experience</h2>
+                <ul class="mdc-list mdc-list--two-line">
+                    <li class="mdc-list-item" tabindex="0">
+                        <span class="mdc-list-item__text">
+                                  <span class="mdc-list-item__primary-text">Guardian Group of Companies</span>
+                        <span class="mdc-list-item__secondary-text">IT Assistant</span>
+                        </span>
+                    </li>
+                    <li class="mdc-list-item" tabindex="0">
+                        <span class="mdc-list-item__text">
+                                      <span class="mdc-list-item__primary-text">University of South Florida</span>
+                        <span class="mdc-list-item__secondary-text">RecWell Student Staff</span>
+                        </span>
+                    </li>
+                    <li class="mdc-list-item" tabindex="0">
+                        <span class="mdc-list-item__text">
+                                          <span class="mdc-list-item__primary-text">University of South Florida</span>
+                        <span class="mdc-list-item__secondary-text">RecWell Student Supervisor</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="mdc-card">
+                <h2><i class="material-icons">code</i> Projects</h2>
+                <ul class="mdc-list">
+                    <li class="mdc-list-item" tabindex="0">
+                        <span class="mdc-list-item__text">Act-A-Fool</span>
+                    </li>
+                    <li class="mdc-list-item" tabindex="0">
+                        <span class="mdc-list-item__text">Navigate-A-Bull</span>
+                    </li>
+                    <li class="mdc-list-item" tabindex="0">
+                        <span class="mdc-list-item__text">Code Presenter</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="mdc-card">
+                <h2><i class="material-icons">create</i> Writing</h2>
+            </div>
+        </div>
+        <div class="w3-twothird mdc-card">
+            <h2>A little bit about me</h2>
+            <p>Paragraphs here</p>
+        </div>
     </div>
 </body>
 
