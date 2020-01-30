@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/64cdcf2b31.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </head>
 
 <body class="w3-light-grey">
-    <div class="w3-row-padding">
+    <div class="w3-row-padding app-content">
         <div class="w3-third">
             <div class="mdc-card">
                 <img class="headshot" src="media/headshot-cropped.png">
@@ -104,22 +105,93 @@
         <div class="w3-twothird">
             <div class="mdc-card">
                 <h2>A little bit about me</h2>
-                <p>My name is Jonathan Sellier. I am currently a student at University of South Florida in Tampa, Florida pursuing a degree in Computer Science. I have always been interested in coding and general computing, even using a computer from as young as 2 years old.</p>
+                <p>My name is Jonathan Sellier. I am currently a student at University of South Florida in Tampa, Florida pursuing a degree in Computer Science. I have always been interested in coding and general computing, even using a computer from as
+                    young as 2 years old.</p>
                 <p>I am using this site as both an online portfolio/resume and also as a central hub for my other creative works like written tutorials and summaries of some of the finer topics in computer science.</p>
-                <p>I consider myself highly motivated and truly love creating side projects and learning new languages, frameworks, and means development strategies. My current love is using JavaScript for cross-platform development through Progressive Web Apps. I truly hope that this means of development takes hold and allows for experiences to be brought to users regardless of their platform.</p>
+                <p>I consider myself highly motivated and truly love creating projects and learning new languages, frameworks, and development strategies. My current love is using JavaScript for cross-platform development through Progressive Web Apps. I
+                    truly hope that this means of development takes hold and allows for experiences to be brought to users regardless of their platform.</p>
             </div>
-            <div class="mdc-card">
+            <div class="mdc-card" id="edu-crd">
                 <h2>Education</h2>
-                <p>Education here</p>
+                <div class="edu-itm">
+                    <h3><b>Diploma in Software Engineering</b> - University of Trinidad and Tobago</h3>
+                    <h6>September 2013 - June 2015</h6>
+                </div>
+                <div class="edu-itm">
+                    <h3><b>Associate of Arts in Computer Science</b> - Hillsborough Community College</h3>
+                    <h6>August 2016 - May 2017</h6>
+                    <p>I left HCC before completing my AA to go to USF in pursuit of my Bachelor's Degree.</p>
+                </div>
+                <div class="edu-itm last">
+                    <h3><b>Bachelor of Engineering in Computer Science</b> - University of South Florida</h3>
+                    <h6>August 2017 - May 2020 <i>(expected)</i></h6>
+                    <p>Notable Courses
+                        <ul>
+                            <li>Intro to AI</li>
+                            <li>Advanced JavaScript</li>
+                            <li>Database Design</li>
+                            <li>Software Development for Mobile Devices</li>
+                            <li>Social Media Mining</li>
+                            <li>IoT Systems Design</li>
+                        </ul>
+                    </p>
+                </div>
             </div>
             <div class="mdc-card">
                 <h2>Experience</h2>
-                <p>Work History here</p>
+                <div class="edu-itm">
+                    <h3><b>IT Assistant</b> - Guardian Group of Companies</h3>
+                    <h6>May 2016 - June 2016</h6>
+                    <p> Helped carry out the hardware upgrade procedures taking place across Guardian Group’s companies including data transfer and additional configuration on the machines. I also provided help desk support for common IT-related issues beyond
+                        the scope of my original employment when my supervisor became aware of my aptitude for computers and troubleshooting. Was quickly allowed to work semi-independantly for certain locations.
+                    </p>
+                </div>
+                <div class="edu-itm">
+                    <h3><b>Recreation and Wellness Staff</b> - University of South Florida</h3>
+                    <h6>May 2019 - December 2019</h6>
+                    <p>Primarily my responsibilities were to facilitate access, equipment rental and, room reservations. I was also tasked to respond appropriately to medical and other emergencies, and give tours as needed. I distinguished myself within
+                        this position with minor technical support relating to automatic access control devices that was outside my official responsibilities. However, I felt that it was within my duty to troubleshoot any ongoing issues in my downtime
+                        as it may hinder the entire team's performance during more busy hours. I was reccomended by my manager to apply for a supervisor position in December.</p>
+                </div>
+                <div class="edu-itm">
+                    <h3><b>Recreation and Wellness Supervisor</b> - University of South Florida</h3>
+                    <h6>December 2019 - Present</h6>
+                    <p>In addition to my regular staff responsibilities I was also tasked with opening and closing all facilities as needed, handling and managing situations as a designated point of contact as well as handling the sale and renewal of memberships.
+                        I have also made an effort to make sure that newer staff members are aware of all procedures and details within the gym and are able to perform to the best of their ability, and be more independant at work.</p>
+                </div>
             </div>
             <div class="mdc-card">
-                <h2>Projects</h2>
-                <h3>Act-a-Fool</h3>
-                <p>Talk about Act-a-Fool here</p>
+                <h2>Projects and Papers</h2>
+                <div class="edu-itm">
+                    <h3>Act-A-Fool</h3>
+                    <h6>Game - JavaScript-based Progressive Web App, and Cordova-powered Android App</h6>
+                    <a href="https://github.com/jonosellier/act-a-fool"><button class="mdc-button mdc-button--raised" id="suBtn">Source</button></a>
+                    <a href="https://act-a-fool.herokuapp.com"><button class="mdc-button mdc-button--raised" id="suBtn">Live Demo</button></a>
+                    <p>This was my very first attempt at using JavaScript to actually create a game for real people to use. It was created as part of an Independant Study at USF where you write a proposal on what you want to learn and how you plan on learning
+                        it. My proposal was based on cross-platform mobile development, a continued area of interst to me. My original intent was to make a Cards Agains Humanity app but the idea of manually rewriting every card by hand was dauning to
+                        me and as this was a 10-week course where I felt that I needed to provide meaningful progress every week, I decided that was too large a side-task that was not meeting the goals of my independant study. I later found out about
+                        <a href="https://crhallberg.com/cah/">JSON Againt Humanity</a> by Chris Hallberg but I took a different route already.</p>
+                    <p>The game was to charades as CAH was to mad-libs: a more modern, current twist on the classic game. It is meant to be played on a single phone/tablet where players take turns being given a card with a category and a person/thing/idea
+                        to pretend to be. No talking. Just acting (a fool). Points are added up and someone wins, fairly standard. Add in a twist of being able to make your own cards and cetegories so I didn't have to and we have a decent party game.</p>
+                    <p>Due to limitations set by Cordova, the underlying web-app had to also be a single-page app. I am well aware of Angular, React, etc. but I set out to learn how to update the DOM myself anyways. I also made an effort to write all the
+                        code, markup, css, etc. myself and I ended up with minimal use of libraries and tools. This was primarily a learning experience for me and I hope that this is taken into context when you ask why I didn't use <i>&lt;library&gt;</i></p>
+                    <p><a href="#">Read More</a></p>
+                </div>
+                <div class="edu-itm">
+                    <h3>Navigate-A-Bull</h3>
+                    <h6>Unnoficial Campus Navigation Service - Progressive Web App</h6>
+                    <a href="https://github.com/jonosellier/nav-a-bull"><button class="mdc-button mdc-button--raised" id="suBtn">Source</button></a>
+                    <a href="https://navigate-a-bull.herokuapp.com"><button class="mdc-button mdc-button--raised" id="suBtn">Live Demo</button></a>
+                    <p>In case you were curious, no, not all my projects are worded as Verb-a-Noun. The name comes from the long-standing tradition that USF must make all of its services some bull-based pun.</p>
+                    <p>Nav-a-Bull is an app that solves an issue, USF is large and buildings are known as one thing on a map but another to students. New students struggle to find their classes every first week of class and my app, co-developed with Kelly
+                        Johnson and Philip Chang seeks to solve this.</p>
+                    <p>Essentially what it comes down to is a skin over Google Maps (however it was intentionally designed to be able to be switched to any other mapping application if needed) that provided a list of places at USF that allow students to
+                        quickly see how to get to a given place without trying to find it on Google/Apple/Bing Maps. The entire idea was get in, get directions, get out. This app was designed to be quick to use and, going against what social media wants
+                        from us, minimize the time spent on the app.</p>
+                    <p>To that end, we decided that installing an app was too much time spent trying to get directions so a PWA that could be linked via QR code on a physical map that is already on campus seemed like the lowest hurdle to use. That fact that
+                        it also satisfied my desire to make everything cross-platform under one codebase was quite pleasing too.</p>
+                    <p><a href="#">Read More</a></p>
+                </div>
             </div>
         </div>
     </div>
