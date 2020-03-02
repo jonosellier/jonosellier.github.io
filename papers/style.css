@@ -1526,7 +1526,7 @@ h6 {
     text-align: left
 }
 
-@media screen and (max-width: 632px) {
+@media screen and (max-width: 350dp) {
     .c23 {
         width: 100%;
         margin: 0
