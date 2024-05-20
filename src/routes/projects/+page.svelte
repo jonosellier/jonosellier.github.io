@@ -1,0 +1,98 @@
+<script>
+	import Title from '$lib/title.svelte';
+</script>
+
+<Title text="Projects" />
+<div class="project">
+	<h1>JSON Reader</h1>
+	<h2>NodeJS CLI Tool</h2>
+	<p>
+		This was made for a part of a tutorial for NodeJS that I may or may not write. It is more of a
+		demonstration of how a useful tool can be made with relatively low code (and dependencies).
+	</p>
+	<p>
+		Its actual use is that you supply it with a JSON file (locally or via HTTPS) and it will in its
+		most basic form print to stdout but this data can be transformed to show a subset of data via
+		JavaScript property access syntax: root.attribute. It can also be used to quickly filter/map the
+		data by passing arbitrary JavaScript to the program as an argument. This data can be printed (or
+		piped) in its raw form or its typedef by wrapping the JavaScript with <code>shapeOf(...)</code>
+	</p>
+	<div class="mt-8 mb-4">
+		<a href="https://github.com/jonosellier/json-reader" class="btn me-4">
+			Source <i class="bi bi-github"></i>
+		</a>
+	</div>
+</div>
+<div class="project">
+	<h1>Act-A-Fool</h1>
+	<h2>JavaScript-based PWA Game</h2>
+	<p>
+		This was my very first attempt at using JavaScript to actually create a game for real people to
+		use. It was created as part of an Independent Study at USF where you write a proposal on what
+		you want to learn and how you plan on learning it. My proposal was based on cross-platform
+		mobile development, a continued area of interest to me. My original intent was to make a Cards
+		Against Humanity app but the idea of manually rewriting every card by hand was daunting to me
+		and as this was a 10-week course where I felt that I needed to provide meaningful progress every
+		week, I decided that was too large a side-task that was not meeting the goals of my independent
+		study. I later found out about JSON Against Humanity by Chris Hallberg but I took a different
+		route already.
+	</p>
+	<p>
+		The game was to charades as CAH was to mad-libs: a more modern, current twist on the classic
+		game. It is meant to be played on a single phone/tablet where players take turns being given a
+		card with a category and a person/thing/idea to pretend to be. No talking. Just acting (a fool).
+		Points are added up and someone wins, fairly standard. Add in a twist of being able to make your
+		own cards and categories so I didn't have to and we have a decent party game.
+	</p>
+	<p>
+		Due to limitations set by Cordova, the underlying web-app had to also be a single-page app. I am
+		well aware of Angular, React, etc. but I set out to learn how to update the DOM myself anyways.
+		I also made an effort to write all the code, markup, css, etc. myself and I ended up with
+		minimal use of libraries and tools. This was primarily a learning experience for me and I hope
+		that this is taken into context when you ask why I didn't use some sort of library
+	</p>
+	<div class="mt-8 mb-4">
+		<a href="https://github.com/jonosellier/act-a-fool" class="btn me-4">
+			Source <i class="bi bi-github"></i>
+		</a>
+		<a href="https://act-a-fool.herokuapp.com/" class="btn me-4 ms-2">
+			Live Demo <i class="bi bi-controller"></i>
+		</a>
+	</div>
+</div>
+<div class="project">
+	<h1 class="text-2xl text-bold">Navigate-A-Bull</h1>
+	<h2>JavaScript-based PWA</h2>
+	<p>
+		In case you were curious, no, not all my projects are worded as Verb-a-Noun. The name comes from
+		the long-standing tradition that USF must make all of its services some bull-based pun.
+	</p>
+	<p>
+		This one is a play on navigable Nav-a-Bull is an app that solves an issue, USF is large and
+		buildings are known as one thing on a map but another to students. New students struggle to find
+		their classes every first week of class and my app, co-developed with Kelly Johnson and Philip
+		Chang seeks to solve this.
+	</p>
+	<p>
+		Essentially what it comes down to is a skin over Google Maps (however it was intentionally
+		designed to be able to be switched to any other mapping application if needed) that provided a
+		list of places at USF that allow students to quickly see how to get to a given place without
+		trying to find it on Google/Apple/Bing Maps. The entire idea was get in, get directions, get
+		out. This app was designed to be quick to use and, going against what social media wants from
+		us, minimize the time spent on the app.
+	</p>
+	<p>
+		To that end, we decided that installing an app was too much time spent trying to get directions
+		so a PWA that could be linked via QR code on a physical map that is already on campus seemed
+		like the lowest hurdle to use. That fact that it also satisfied my desire to make everything
+		cross-platform under one codebase was quite pleasing too.
+	</p>
+	<div class="mt-8 mb-4">
+		<a href="https://github.com/jonosellier/nav-a-bull" class="btn me-4">
+			Source <i class="bi bi-github"></i>
+		</a>
+		<a href="https://navigate-a-bull.herokuapp.com/" class="btn me-4 ms-2">
+			Live Demo <i class="bi bi-compass"></i>
+		</a>
+	</div>
+</div>

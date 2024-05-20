@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu-btn-icon {
+	@apply hover:bg-slate-500/30 rounded-full w-9 h-9 inline-block text-center align-middle p-1;
+}
+
+:root {
+	--prim-1: #be123c; /*rose-700*/
+	--prim-2: #22d3ee; /*cyan-400*/
+}
+
+body,
+#app {
+	min-height: 100vh;
+	@apply font-sans;
+}
+
+.menu-btn:hover,
+.menu-btn:focus-visible,
+.menu-btn.active {
+	outline: none;
+	background-color: #fff;
+	color: #000;
+	box-shadow:
+		0px 0px 0px 0px #fff,
+		-6px -6px 0px 6px var(--prim-1),
+		6px 6px 0px 6px var(--prim-2);
+	border-radius: 0;
+}
+
+.menu-btn {
+	background-color: #0000;
+	text-transform: uppercase;
+	letter-spacing: 6px;
+	border: none;
+	color: #fff;
+	padding: 2px 4px;
+	box-shadow:
+		0 0 0 6px #000,
+		0 0 0 8px #fff,
+		0 0 0 8px #fff;
+	transition: 0.325s ease;
+	border-radius: 0;
+}
+
+.menu-btn.active {
+	font-weight: 700;
+
+	box-shadow:
+		0px 0px 0px 6px #fff,
+		-2px -2px 0px 8px var(--prim-1),
+		2px 2px 0px 8px var(--prim-2);
+}
+
+.menu-btn.active:hover {
+	box-shadow:
+		0px 0px 0px 4px #fff,
+		-4px -4px 0px 8px var(--prim-1),
+		4px 4px 0px 8px var(--prim-2);
+}
+
+.project {
+	@apply my-10 p-4 rounded-sm border-slate-600 border;
+}
+
+.project h1 {
+	@apply text-2xl font-bold;
+}
+
+.project h2 {
+	@apply text-sm mb-6 text-cyan-400;
+}
+
+.project p:not(:last-of-type) {
+	@apply mb-4;
+}
+
+.project code {
+	@apply bg-slate-700 text-slate-50 rounded-sm;
+}
+
+.btn {
+	@apply border-white text-white bg-black px-4 py-2 uppercase hover:bg-white hover:text-black border-2;
+	letter-spacing: 3px;
+}
