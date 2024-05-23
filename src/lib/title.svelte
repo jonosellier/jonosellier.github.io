@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
+	import { browser } from '$app/environment';
 
 	const height = 72;
 
@@ -22,14 +23,16 @@
 	export let text: string;
 
 	onMount(() => {
-		window.addEventListener('resize', initGlitchEffect);
-		const style = getComputedStyle(document.body);
-		color = [style.getPropertyValue('--prim-1'), style.getPropertyValue('--prim-2')];
-		context = canvas.getContext('2d') as any;
-		context.imageSmoothingQuality = 'high';
-		imgShadow = new Image();
-		imgWithShadow = new Image();
-		initGlitchEffect();
+		if (browser) {
+			window.addEventListener('resize', initGlitchEffect);
+			const style = getComputedStyle(document.body);
+			color = [style.getPropertyValue('--prim-1'), style.getPropertyValue('--prim-2')];
+			context = canvas.getContext('2d') as any;
+			context.imageSmoothingQuality = 'high';
+			imgShadow = new Image();
+			imgWithShadow = new Image();
+			initGlitchEffect();
+		}
 	});
 
 	function initGlitchEffect() {
@@ -45,7 +48,9 @@
 
 	onDestroy(() => {
 		clearTimeout(nextGlitch);
-		window.removeEventListener('resize', initGlitchEffect);
+		if (browser) {
+			window.removeEventListener('resize', initGlitchEffect);
+		}
 	});
 
 	function recursiveGlitch() {
