@@ -87,3 +87,56 @@ body,
 	@apply border-white text-white bg-black px-4 py-2 uppercase hover:bg-white hover:text-black border-2;
 	letter-spacing: 3px;
 }
+
+.glitch1 {
+	-webkit-text-stroke: 4px solid var(--prim-1);
+}
+
+@keyframes glitch1 {
+	0%,
+	100% {
+		transform: skew(0, 0);
+		box-shadow: none;
+		background-color: transparent;
+	}
+
+	20%,
+	60% {
+		transform: skew(-15deg);
+		color: var(--prim-1);
+		-webkit-text-stroke: 4px solid var(--prim-2);
+	}
+
+	40%,
+	80% {
+		color: var(--prim-2);
+		-webkit-text-stroke: 4px solid var(--prim-1);
+	}
+}
+
+.glitch2 {
+	animation: glitch2 200ms steps(6, start) forwards;
+}
+
+@keyframes glitch2 {
+	0%,
+	100% {
+		transform: skew(0, 0);
+		box-shadow: none;
+		background-color: transparent;
+		-webkit-text-stroke: 4px solid var(--prim-2);
+	}
+
+	40%,
+	80% {
+		transform: skew(-15deg);
+		color: var(--prim-1);
+		-webkit-text-stroke: 4px solid var(--prim-2);
+	}
+
+	20%,
+	60% {
+		color: var(--prim-2);
+		-webkit-text-stroke: 4px solid var(--prim-1);
+	}
+}

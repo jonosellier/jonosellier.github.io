@@ -14,7 +14,7 @@
 
 <style>
 	.glitch1 {
-		animation: glitch1 200ms steps(4, start) forwards;
+		animation: glitch1 200ms steps(5, start) forwards;
 	}
 
 	@keyframes glitch1 {
@@ -22,30 +22,23 @@
 		100% {
 			transform: skew(0, 0);
 			box-shadow: none;
-			background-color: transparent;
 		}
 
-		20%,
-		60% {
-			box-shadow:
-				2px 0px 0px 1px var(--prim-2),
-				-3px 4px 0 1px var(--prim-1);
-			background-color: black;
+		50% {
+			transform: skew(15deg);
 			color: var(--prim-1);
+			-webkit-text-stroke: 4px solid var(--prim-2);
 		}
 
-		40%,
-		80% {
-			box-shadow:
-				-2px 0px 0px 1px var(--prim-2),
-				3px -2px 0 1px var(--prim-1);
-			background-color: white;
+		25%,
+		75% {
 			color: var(--prim-2);
+			-webkit-text-stroke: 4px solid var(--prim-1);
 		}
 	}
 
 	.glitch2 {
-		animation: glitch2 200ms steps(4, start) forwards;
+		animation: glitch2 200ms steps(5, start) forwards;
 	}
 
 	@keyframes glitch2 {
@@ -53,25 +46,18 @@
 		100% {
 			transform: skew(0, 0);
 			box-shadow: none;
-			background-color: transparent;
 		}
 
-		40%,
-		80% {
-			box-shadow:
-				2px 0px 0px 1px var(--prim-2),
-				-3px 4px 0 1px var(--prim-1);
-			background-color: black;
+		25%,
+		75% {
+			transform: skew(-15deg);
 			color: var(--prim-1);
+			-webkit-text-stroke: 4px solid var(--prim-2);
 		}
 
-		20%,
-		60% {
-			box-shadow:
-				-2px 0px 0px 1px var(--prim-2),
-				3px -2px 0 1px var(--prim-1);
-			background-color: white;
+		50% {
 			color: var(--prim-2);
+			-webkit-text-stroke: 4px solid var(--prim-1);
 		}
 	}
 </style>
