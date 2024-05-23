@@ -21,12 +21,12 @@
 
 	export let text: string;
 
-	window.addEventListener('resize', initGlitchEffect);
-
 	onMount(() => {
+		window.addEventListener('resize', initGlitchEffect);
 		const style = getComputedStyle(document.body);
 		color = [style.getPropertyValue('--prim-1'), style.getPropertyValue('--prim-2')];
 		context = canvas.getContext('2d') as any;
+		context.imageSmoothingQuality = 'high';
 		imgShadow = new Image();
 		imgWithShadow = new Image();
 		initGlitchEffect();

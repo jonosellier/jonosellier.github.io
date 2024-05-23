@@ -4,8 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.menu-btn-icon {
-	@apply hover:bg-slate-500/30 rounded-full w-9 h-9 inline-block text-center align-middle p-1;
+.btn-icon {
+	@apply hover:bg-slate-100/30 rounded-full w-9 h-9 inline-block text-center align-middle p-1 text-white;
 }
 
 :root {

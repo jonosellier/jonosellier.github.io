@@ -1,6 +1,6 @@
 <div class="w-min">
 	<h1 class="text-4xl font-bold text-nowrap mx-3">Jonathan Sellier</h1>
-	<img src="logo.svg" alt="" class="w-full" />
+	<img src="logo.webp" alt="" width="470" />
 </div>
 <hr class="my-7 border-slate-500" />
 <h1 class="text-4xl font-bold">

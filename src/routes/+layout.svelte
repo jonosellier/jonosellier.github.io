@@ -3,37 +3,70 @@
 	import '../app.css';
 	import { page } from '$app/stores';
 	import Footer from '$lib/footer.svelte';
+	import { menuOpen } from '$lib/menu-state.store';
+	import MenuButton from '$lib/menu-button.svelte';
 
 	$: location = $page.url.pathname;
 </script>
 
-<div class="text-white bg-gray-950 min-h-lvh flex">
-	<header class="sticky py-20 px-6 flex-grow-0 top-0 h-min me-10 left-0 w-2/12">
-		<div class="w-min mx-auto">
-			<a class="block menu-btn m-1 text-lg w-full my-6" class:active={location === '/'} href="/"
-				>Home</a
-			>
-			<a
-				class="block menu-btn m-1 text-lg w-full my-6"
-				class:active={location === '/about'}
-				href="/about">About me</a
-			>
-			<a
-				class="block menu-btn m-1 text-lg w-full my-6"
-				class:active={location === '/projects'}
-				href="/projects">Projects</a
-			>
-			<a
-				class="block menu-btn m-1 text-lg w-full my-6"
-				class:active={location === '/writing'}
-				href="/writing">Writing</a
-			>
-		</div>
-	</header>
-	<div class="w-8/12 py-20 flex flex-col">
+<div class="text-white bg-gray-950 min-h-lvh">
+	<nav
+		class="fixed py-20 px-6 flex-grow-0 top-0 h-dvh me-10 left-0 w-56 bg-gray-950 border-r border-cyan-400 md:border-r-0 z-10 duration-200"
+		class:menu-hidden={$menuOpen}
+	>
+		<ul class="w-min mx-auto">
+			<li>
+				<a class="block menu-btn m-1 text-lg w-full my-6" class:active={location === '/'} href="/"
+					>Home</a
+				>
+			</li>
+			<li>
+				<a
+					class="block menu-btn m-1 text-lg w-full my-6"
+					class:active={location === '/about'}
+					href="/about">About me</a
+				>
+			</li>
+			<li>
+				<a
+					class="block menu-btn m-1 text-lg w-full my-6"
+					class:active={location === '/projects'}
+					href="/projects">Projects</a
+				>
+			</li>
+			<li>
+				<a
+					class="block menu-btn m-1 text-lg w-full my-6"
+					class:active={location === '/writing'}
+					href="/writing">Writing</a
+				>
+			</li>
+		</ul>
+	</nav>
+	<div class="py-20 flex flex-col content-container px-4 mx">
 		<main class="mx-auto max-w-5xl flex-grow">
 			<slot />
 		</main>
 		<Footer></Footer>
 	</div>
 </div>
+
+<MenuButton></MenuButton>
+
+<style>
+	.content-container {
+		max-width: 100%;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1530px) {
+		.content-container {
+			padding-left: 15rem;
+		}
+	}
+
+	@media screen and (max-width: 767.999px) {
+		.menu-hidden {
+			translate: -14.5rem;
+		}
+	}
+</style>
