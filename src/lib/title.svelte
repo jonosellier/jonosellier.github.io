@@ -216,9 +216,10 @@
 </script>
 
 <div class="relative">
-	<canvas bind:this={canvas} style={`height: ${height}px`}></canvas>
+	<canvas bind:this={canvas} style={`height: ${height}px`} class="z-10 pointer-events-none"
+	></canvas>
 	<span
-		class="text-slate-950/0 absolute top-0 font-bold"
+		class="text-slate-950/0 absolute top-0 font-bold z-20"
 		style={`font-size: ${height}px; line-height: ${height * 0.8}px`}
 		>{text.toLocaleUpperCase()}</span
 	>

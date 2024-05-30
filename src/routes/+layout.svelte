@@ -11,8 +11,8 @@
 
 <div class="text-white bg-gray-950 min-h-lvh">
 	<nav
-		class="fixed py-20 px-6 flex-grow-0 top-0 h-dvh me-10 left-0 w-56 bg-gray-950 border-r border-cyan-400 md:border-r-0 z-10 duration-200"
-		class:menu-hidden={$menuOpen}
+		class="fixed py-20 px-6 flex-grow-0 top-0 h-dvh me-10 left-0 w-56 bg-gray-950 border-r border-cyan-400 md:border-r-0 z-50 duration-200"
+		class:menu-hidden={!$menuOpen}
 	>
 		<ul class="w-min mx-auto">
 			<li>
@@ -43,7 +43,14 @@
 			</li>
 		</ul>
 	</nav>
-	<div class="py-20 flex flex-col content-container px-4 mx">
+	{#if $menuOpen}<div
+			class="fixed top-0 bottom-0 inset-0 z-40 md:hidden"
+			on:click={() => menuOpen.set(false)}
+			on:keydown={() => void 0}
+			role="presentation"
+		></div>
+	{/if}
+	<div class="py-20 flex flex-col content-container px-4 mx-0">
 		<main class="mx-auto max-w-5xl flex-grow">
 			<slot />
 		</main>
