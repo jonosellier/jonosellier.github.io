@@ -68,7 +68,7 @@ export const resume = {
 				'IoT Systems Design'
 			]
 		}
-	],
+	].sort(sortByDate),
 	professionalExperience: [
 		{
 			title: 'IT Assistant',
@@ -106,7 +106,7 @@ export const resume = {
 				'My primary focus is front-end work but I have utilized a variety of technologies at my current role beyond front-end development such as such as NestJS, MSSQL Server, and Capacitor.'
 			]
 		}
-	],
+	].sort(sortByDate),
 	skills: [
 		'Angular',
 		'JavaScript',
@@ -131,3 +131,10 @@ export const resume = {
 		'AWS'
 	]
 } as const satisfies ResumeData;
+
+function sortByDate(
+	a: { date: { from: Date; to?: Date } },
+	b: { date: { from: Date; to?: Date } }
+) {
+	return (b.date.to?.valueOf() ?? Date.now()) - (a.date.to?.valueOf() ?? Date.now());
+}
