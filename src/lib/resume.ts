@@ -1,7 +1,7 @@
 export type ResumeData = {
 	education: Education[];
 	professionalExperience: Experience[];
-	skills: string[];
+	skills: { name: string; year: number }[];
 };
 
 export type Education = {
@@ -15,7 +15,7 @@ export type Experience = {
 	title: string;
 	employer: string;
 	date: DateRange;
-	description: string[];
+	details: string[];
 };
 
 export class DateRange {
@@ -31,6 +31,10 @@ export class DateRange {
 		months -= from.getMonth();
 		months += to.getMonth();
 
+		if (months < 2) {
+			return `1 month`;
+		}
+
 		if (months < 12) {
 			return `${months} months`;
 		}
@@ -39,7 +43,7 @@ export class DateRange {
 			return `${months / 12} years`;
 		}
 
-		return `${months / 12} years, ${months % 12} months`;
+		return `${(months / 12) | 0} years, ${months % 12} months`;
 	}
 }
 
@@ -48,17 +52,17 @@ export const resume = {
 		{
 			school: 'University of Trinidad and Tobago',
 			diploma: 'Diploma in Software Engineering',
-			date: new DateRange(new Date('1st September 2013'), new Date('1st June 2015'))
+			date: new DateRange(new Date('1 September 2013'), new Date('1 June 2015'))
 		},
 		{
 			school: 'Hillsborough Community College',
 			diploma: 'Associate of Arts in Computer Science',
-			date: new DateRange(new Date('1st August 2016'), new Date('1st May 2017'))
+			date: new DateRange(new Date('27 August 2016'), new Date('9 May 2017'))
 		},
 		{
 			school: 'University of South Florida',
 			diploma: 'Bachelor of Science in Computer Science',
-			date: new DateRange(new Date('1st August 2017'), new Date('1st May 2020')),
+			date: new DateRange(new Date('27 August 2017'), new Date('9 May 2020')),
 			notableClasses: [
 				'Intro to AI',
 				'Advanced JavaScript',
@@ -71,64 +75,83 @@ export const resume = {
 	].sort(sortByDate),
 	professionalExperience: [
 		{
-			title: 'IT Assistant',
-			employer: 'Guardian Group of Companies',
-			date: new DateRange(new Date('1st May 2016'), new Date('1st June 2016')),
-			description: [
-				'Temp. contract',
-				'Helped carry out the hardware upgrade procedures taking place across Guardian Group’s companies including data transfer and additional configuration on the machines. I also provided help desk support for common IT-related issues beyond the scope of my original employment when my supervisor became aware of my aptitude for computers and troubleshooting. Was quickly allowed to work semi-independantly for certain locations.'
-			]
-		},
-		{
-			title: 'Recreation and Wellness Staff',
-			employer: 'University of South Florida',
-			date: new DateRange(new Date('1st May 2019'), new Date('1st December 2019')),
-			description: [
-				"Primarily my responsibilities were to facilitate access, equipment rental and, room reservations. I was also tasked to respond appropriately to medical and other emergencies, and give tours as needed. I distinguished myself within this position with minor technical support relating to automatic access control devices that was outside my official responsibilities. However, I felt that it was within my duty to troubleshoot any ongoing issues in my downtime as it may hinder the entire team's performance during more busy hours. I was reccomended by my manager to apply for a supervisor position in December."
-			]
-		},
-		{
-			title: 'Recreation and Wellness Supervisor',
-			employer: 'University of South Florida',
-			date: new DateRange(new Date('1st December 2019'), new Date('1st May 2020')),
-			description: [
-				'In addition to my regular staff responsibilities I was also tasked with opening and closing all facilities as needed, handling and managing situations as a designated point of contact as well as handling the sale and renewal of memberships. I have also made an effort to make sure that newer staff members are aware of all procedures and details within the gym and are able to perform to the best of their ability, and be more independent at work. I left this position upon graduation to pursue a career in Web-App development.'
+			title: 'Software Engineer',
+			employer: 'AdvancedMD',
+			date: new DateRange(new Date('1 December 2023')),
+			details: [
+				'Maintain and develop both internal and customer-facing tools for one of the largest medical practice management software systems',
+				'Develop new features with strong coding practices, ensure adequate test coverage, and manage user stories from development to production',
+				'Present team accomplishments to key stakeholders and serve on the company-wide UI/UX committee',
+				'Instrumental in setting development standards and creating a novel tool to help clients automate migration from third-party vendor services during technical failures, recognized by management for rapid translation of user requirements into production-grade code'
 			]
 		},
 		{
 			title: 'Software Engineer',
 			employer: 'Boson Software',
-			date: new DateRange(new Date('1st May 2020'), new Date('1st December 2023')),
-			description: [
-				'My primary role at Boson Software is the development and support of a web-based version of <a href="https://exams.boson.com">ExSim-Max</a>, a testing suite designed primarily for IT certification practice exams.',
-				'A notable achievement beyond the scope of my duties was how I have optimized the creation of custom-made simulation questions by creating both data structures to represent common types of simulation questions as well as a GUI for rapid creation. The resulting gains in productivity turn week-long tasks into day-long tasks as well as allowed colleagues in non-technical roles to make minor changes without the assistance of developers. I have also successfully pushed for product documentation to me moved from a PDF to a searchable, responsive documentation site.',
-				'I also provide support for our Windows-only version (branded as Boson Exam Environment) by creating duplicating work done for the web version with custom-made "simulation questions" which are VB or C# programs to simulate more complicated questions. Items include virtual terminals, drag and drop questions, and both desktop and mobile device configuration.',
-				'My primary focus is front-end work but I have utilized a variety of technologies at my current role beyond front-end development such as such as NestJS, MSSQL Server, and Capacitor.'
+			date: new DateRange(new Date('1 May 2020'), new Date('1 December 2023')),
+			details: [
+				'Developed and supported a web-based version of ExSim-Max, an IT certification practice exam suite',
+				'Optimized custom simulation question creation with new data structures and a GUI, significantly increasing productivity and enabling non-technical staff to make minor changes independently',
+				'Transitioned product documentation from PDF to a searchable, responsive site, developed independently',
+				'Provided support for the Windows-only Boson Exam Environment, creating complex simulation questions using VB and C#',
+				'80% front-end work 20% API and database work',
+				'Utilized technologies such as Angular, TypeScript, NestJS, JavaScript, Capacitor, Svelte, C#, .NET, and SQL Server',
+				'Became the company-wide expert on front-end design, shaping the design of multiple web applications and implementing a UI framework used in current and future products'
+			]
+		},
+		{
+			title: 'Recreation and Wellness Supervisor',
+			employer: 'University of South Florida',
+			date: new DateRange(new Date('1 December 2019'), new Date('1 May 2020')),
+			details: [
+				'Managed opening and closing facilities, handling situations as a designated point of contact, and managing membership sales and renewals',
+				'Trained new staff on procedures and details within the gym, ensuring high performance and independence',
+				'Demonstrated exceptional team-management skills and conflict-resolution skills by handling conflicts between guests or staff members'
+			]
+		},
+		{
+			title: 'Recreation and Wellness Staff',
+			employer: 'University of South Florida',
+			date: new DateRange(new Date('1 May 2019'), new Date('1 December 2019')),
+			details: [
+				'Facilitated access, equipment rental, and room reservations',
+				'Responded to medical and other emergencies and provided tours as needed',
+				'Provided minor technical support for access control devices, improving team performance during busy hours',
+				'Recommended by manager for a supervisor position due to exemplary performance'
+			]
+		},
+		{
+			title: 'IT Assistant',
+			employer: 'Guardian Group of Companies',
+			date: new DateRange(new Date('1 May 2016'), new Date('1 June 2016')),
+			details: [
+				'Assisted in hardware upgrades, including data transfer and machine configuration',
+				'Provided help desk support for IT-related issues beyond initial employment scope, recognized for aptitude in troubleshooting',
+				'Granted semi-independent work at certain locations due to demonstrated capability'
 			]
 		}
 	].sort(sortByDate),
 	skills: [
-		'Angular',
-		'JavaScript',
-		'TypeScript',
-		'.NET (C#)',
-		'WebSockets',
-		'Adobe Creative Cloud',
-		'Python',
-		'VisualBasic',
-		'Express',
-		'NextJS',
-		'Object Oriented Design',
-		'Functional Programming',
-		'Search Engine Optimization',
-		'Web Accessibility',
-		'Web Animations',
-		'CSS',
-		'SCSS',
-		'Azure',
-		'Bash',
-		'Linux',
-		'AWS'
+		{ name: 'Angular', year: 2019 },
+		{ name: 'RxJS', year: 2020 },
+		{ name: 'JavaScript', year: 2013 },
+		{ name: 'TypeScript', year: 2018 },
+		{ name: '.NET (C#)', year: 2020 },
+		{ name: 'Adobe Creative Cloud', year: 2020 },
+		{ name: 'Python', year: 2019 },
+		{ name: 'VisualBasic', year: 2020 },
+		{ name: 'Express', year: 2019 },
+		{ name: 'NestJS', year: 2021 },
+		{ name: 'Object Oriented Design', year: 2017 },
+		{ name: 'Functional Programming', year: 2018 },
+		{ name: 'Search Engine Optimization', year: 2021 },
+		{ name: 'Web Accessibility', year: 2021 },
+		{ name: 'Web Animations', year: 2021 },
+		{ name: 'CSS', year: 2013 },
+		{ name: 'SCSS', year: 2020 },
+		{ name: 'AWS', year: 2023 },
+		{ name: 'Bash', year: 2019 },
+		{ name: 'Linux', year: 2019 }
 	]
 } as const satisfies ResumeData;
 
@@ -136,5 +159,5 @@ function sortByDate(
 	a: { date: { from: Date; to?: Date } },
 	b: { date: { from: Date; to?: Date } }
 ) {
-	return (b.date.to?.valueOf() ?? Date.now()) - (a.date.to?.valueOf() ?? Date.now());
+	return b.date.from.valueOf() - a.date.from.valueOf();
 }
