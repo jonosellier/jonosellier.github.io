@@ -92,6 +92,10 @@ body,
 	-webkit-text-stroke: 4px solid var(--prim-1);
 }
 
+a:not([class]) {
+	@apply underline underline-offset-2 decoration-cyan-400 hover:bg-cyan-400 hover:text-slate-900;
+}
+
 @keyframes glitch1 {
 	0%,
 	100% {
