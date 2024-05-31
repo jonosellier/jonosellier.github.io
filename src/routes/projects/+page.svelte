@@ -4,6 +4,38 @@
 
 <Title text="Projects" />
 <div class="project">
+	<h1>Better Start</h1>
+	<h2>Custom New-Tab Page</h2>
+	<p>Built using SvelteKit and Tailwind CSS.</p>
+	<p>
+		I have always found that new tab pages are great for personal use but lack in a more constrained
+		work environment where you're using a few tools <strong>very</strong> often. In a personal setting,
+		you're "browsing" where you're either searching for a specific thing or happy to be fed algorithmic
+		content from social media. However in a work setting, you're often looking at only a few different
+		web-apps but referring back to multiple different pages within a given web-app on a daily basis.
+	</p>
+	<p>
+		For example, a developer may only need to access Jira, Confluence, GitHub, and the
+		staging/production versions of their company's apps but within those few apps, there's multiple
+		locations they'd often go to. In Jira, they may want to have their team's current sprint, some
+		dashboards, and some project pages they manage all bookmarked. In a traditional new tab page,
+		there would be 5+ "Jira" bookmarks with a similar favicon so they are not easily seen.
+	</p>
+	<p>
+		This new new-tab page actually lets you group links by section and assign custom icons (or
+		emojis) to each section for visual grouping. In the example above, those Jira pages would all be
+		under one group, maybe they'd add a link to their GitHub PR queue as well and group the whole
+		thing "Development". Confluence can have frequently used spaces linked and the company app they
+		develop can be a section with local, development, stage and production links within it.
+	</p>
+	<div class="mt-8 mb-4">
+		<a href="https://github.com/jonosellier/better-start" class="btn me-4">
+			Source <i class="bi bi-github"></i>
+		</a>
+		<a class="btn" href="https://jonosellier.github.io/better-start">Try it out</a>
+	</div>
+</div>
+<div class="project">
 	<h1>JSON Reader</h1>
 	<h2>NodeJS CLI Tool</h2>
 	<p>
@@ -55,9 +87,6 @@
 		<a href="https://github.com/jonosellier/act-a-fool" class="btn me-4">
 			Source <i class="bi bi-github"></i>
 		</a>
-		<a href="https://act-a-fool.herokuapp.com/" class="btn me-4 ms-2">
-			Live Demo <i class="bi bi-controller"></i>
-		</a>
 	</div>
 </div>
 <div class="project">
@@ -90,9 +119,6 @@
 	<div class="mt-8 mb-4">
 		<a href="https://github.com/jonosellier/nav-a-bull" class="btn me-4">
 			Source <i class="bi bi-github"></i>
-		</a>
-		<a href="https://navigate-a-bull.herokuapp.com/" class="btn me-4 ms-2">
-			Live Demo <i class="bi bi-compass"></i>
 		</a>
 	</div>
 </div>
