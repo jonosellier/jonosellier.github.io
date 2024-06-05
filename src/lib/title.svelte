@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
 	import { browser } from '$app/environment';
+	import { media } from './media';
 
 	const height = 72;
 
@@ -23,7 +24,7 @@
 	export let text: string;
 
 	onMount(() => {
-		if (browser) {
+		if (browser && !media.prefersReducedMotion()) {
 			window.addEventListener('resize', initGlitchEffect);
 			const style = getComputedStyle(document.body);
 			color = [style.getPropertyValue('--prim-1'), style.getPropertyValue('--prim-2')];
@@ -219,7 +220,8 @@
 	<canvas bind:this={canvas} style={`height: ${height}px`} class="z-10 pointer-events-none"
 	></canvas>
 	<span
-		class="text-slate-950/0 absolute top-0 font-bold z-20"
+		class="text-white
+		absolute top-0 font-bold z-20"
 		style={`font-size: ${height}px; line-height: ${height * 0.8}px`}
 		>{text.toLocaleUpperCase()}</span
 	>
@@ -228,5 +230,19 @@
 <style>
 	canvas {
 		width: 100%;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		canvas {
+			opacity: 0;
+		}
+
+		span {
+			opacity: 1 !important;
+		}
+	}
+
+	span {
+		opacity: 0;
 	}
 </style>
