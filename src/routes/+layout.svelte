@@ -1,5 +1,4 @@
 <script>
-	import Icon from '$lib/icon.svelte';
 	import '../app.css';
 	import { page } from '$app/stores';
 	import Footer from '$lib/footer.svelte';

@@ -1,7 +1,17 @@
 export type ResumeData = {
 	education: Education[];
 	professionalExperience: Experience[];
+	certifications: Cert[];
 	skills: { name: string; year: number }[];
+};
+
+export type Cert = {
+	title: string;
+	issuer: string;
+	badgeUrl?: string;
+	id?: string;
+	issued: Date;
+	link?: { text: string; href: string };
 };
 
 export type Education = {
@@ -152,6 +162,19 @@ export const resume = {
 		{ name: 'AWS', year: 2023 },
 		{ name: 'Bash', year: 2019 },
 		{ name: 'Linux', year: 2019 }
+	],
+	certifications: [
+		{
+			title: 'Certified Cloud Practitioner',
+			issuer: 'Amazon Web Services',
+			badgeUrl:
+				'https://images.credly.com/size/680x680/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png',
+			link: {
+				text: 'View in Credly',
+				href: 'https://www.credly.com/badges/87532c3f-d188-4ba5-9991-083bfbe59746'
+			},
+			issued: new Date('17 May 2024')
+		}
 	]
 } as const satisfies ResumeData;
 

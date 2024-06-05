@@ -84,15 +84,24 @@ body,
 }
 
 .btn {
-	@apply border-white text-white bg-black px-4 py-2 uppercase hover:bg-white hover:text-black border-2;
+	@apply text-white px-4 py-2 uppercase hover:bg-white hover:text-black border-2;
 	letter-spacing: 3px;
+}
+
+.btn:not(.btn-border) {
+	@apply border-white;
+}
+
+.btn.btn-sm {
+	@apply text-sm px-2 py-1;
+	letter-spacing: 1px;
 }
 
 .glitch1 {
 	-webkit-text-stroke: 4px solid var(--prim-1);
 }
 
-a:not([class]) {
+a.base {
 	@apply underline underline-offset-2 decoration-cyan-400 hover:bg-cyan-400 hover:text-slate-900;
 }
 
