@@ -17,7 +17,7 @@
 	let imgDataShadows: string;
 	let imageDataWithShadow: string;
 
-	let color = ['red', 'blue'];
+	let color: [string, string] = ['red', 'blue'];
 
 	let nextGlitch = -1;
 
