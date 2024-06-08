@@ -102,7 +102,7 @@ body,
 }
 
 a.base {
-	@apply underline underline-offset-2 decoration-cyan-400 hover:bg-cyan-400 hover:text-slate-900;
+	@apply underline underline-offset-2 decoration-cyan-400 hover:bg-cyan-400 hover:text-slate-900 decoration-2 duration-200;
 }
 
 @keyframes glitch1 {
