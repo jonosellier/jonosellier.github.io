@@ -4,6 +4,7 @@
 	import Footer from '$lib/footer.svelte';
 	import { menuOpen } from '$lib/menu-state.store';
 	import MenuButton from '$lib/menu-button.svelte';
+	import { media } from '$lib/media';
 
 	$: location = $page.url.pathname;
 </script>
@@ -49,13 +50,17 @@
 			role="presentation"
 		></div>
 	{/if}
-	<div class="py-20 flex flex-col content-container px-4 mx-0">
+	<div class="py-20 flex flex-col content-container px-4 mx-0 min-h-dvh">
 		<main class="mx-auto max-w-5xl flex-grow">
 			<slot />
 		</main>
 		<Footer></Footer>
 	</div>
 </div>
+
+{#if !media.prefersReducedMotion()}
+	<div class="fixed top-0 left-0 w-full h-dvh crt-overlay z-50"></div>
+{/if}
 
 <MenuButton></MenuButton>
 
@@ -73,6 +78,24 @@
 	@media screen and (max-width: 767.999px) {
 		.menu-hidden {
 			translate: -14.5rem;
+		}
+	}
+
+	.crt-overlay {
+		background: linear-gradient(to top, #00000010, #00000010, #24242410, #24242410);
+		background-size: cover;
+		background-size: 100% 8px;
+		background-blend-mode: color-dodge;
+		pointer-events: none;
+		animation: scanline 6s linear infinite;
+	}
+
+	@keyframes scanline {
+		from {
+			background-position: 0 0;
+		}
+		to {
+			background-position: 0 -40px;
 		}
 	}
 </style>
