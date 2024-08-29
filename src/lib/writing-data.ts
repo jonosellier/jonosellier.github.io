@@ -1,0 +1,6 @@
+export const writingData = [
+	{ path: 'happiest-communities-reddit', title: 'Finding the Happiest Communities on Reddit' },
+	{ path: 'must-have-productivity-tools', title: '4 Must-Have Tools for Developing on Windows' },
+	{ path: 'overlay-scrollbars', title: 'Easy Overlay Scrollbars with Reactive Design' },
+	{ path: 'win-term', title: 'Things you might not know about Windows Terminal' }
+] as const;

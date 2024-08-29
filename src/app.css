@@ -83,6 +83,69 @@ body,
 	@apply bg-slate-700 text-slate-50 rounded-sm;
 }
 
+.article blockquote {
+	@apply border-l-4 border-rose-700 px-8 py-4 bg-slate-700 my-8;
+}
+
+.article h1 {
+	@apply text-4xl font-bold;
+}
+
+.article hr {
+	@apply border-slate-700 my-8 w-32 border-4;
+}
+
+.article h2 {
+	@apply text-3xl mt-6 mb-4 text-cyan-400;
+}
+
+.article h3 {
+	@apply text-xl mt-4 mb-2 text-cyan-200;
+}
+
+.article p:not(:last-of-type) {
+	@apply mb-4;
+}
+
+.article p:has(img) {
+	@apply text-center italic text-xs text-slate-300 leading-10;
+}
+
+.article p > img {
+	@apply block mx-auto;
+}
+
+.article code {
+	@apply bg-slate-700 text-slate-50 rounded-sm;
+}
+
+.article pre,
+.article pre > code {
+	@apply bg-slate-800 text-slate-50;
+}
+.article pre {
+	@apply p-8 my-8;
+	box-shadow:
+		-2px -2px 0px 2px var(--prim-1),
+		2px 2px 0px 2px var(--prim-2);
+}
+
+.article th {
+	@apply text-start text-cyan-200 border-b border-slate-500;
+}
+
+.article th,
+.article td {
+	@apply align-top px-5 py-2;
+}
+
+.article ul {
+	@apply list-disc list-inside mb-4 marker:text-rose-400;
+}
+.article ol {
+	@apply list-decimal list-inside mb-4 marker:text-rose-400;
+}
+
 .btn {
 	@apply text-white px-4 py-2 uppercase hover:bg-white hover:text-black border-2;
 	letter-spacing: 3px;
@@ -101,7 +164,8 @@ body,
 	-webkit-text-stroke: 4px solid var(--prim-1);
 }
 
-a.base {
+a.base,
+.article a {
 	@apply underline underline-offset-2 decoration-cyan-400 hover:bg-cyan-400 hover:text-slate-900 decoration-2 duration-200;
 }
 

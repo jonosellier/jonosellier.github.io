@@ -12,7 +12,8 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"test:integration": "playwright test",
-		"test:unit": "vitest"
+		"test:unit": "vitest",
+		"update-manifest": "node ./tools/generate-writing-manifest.js"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
@@ -38,5 +39,8 @@
 		"vite": "^5.0.3",
 		"vitest": "^1.2.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"marked": "^14.1.0"
+	}
 }
