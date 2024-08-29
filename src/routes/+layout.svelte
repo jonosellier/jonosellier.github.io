@@ -51,7 +51,7 @@
 		></div>
 	{/if}
 	<div class="py-20 flex flex-col content-container px-4 mx-0 min-h-dvh">
-		<main class="mx-auto max-w-5xl flex-grow">
+		<main class="mx-auto w-full max-w-5xl flex-grow">
 			<slot />
 		</main>
 		<Footer></Footer>

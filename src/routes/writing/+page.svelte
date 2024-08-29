@@ -1,6 +1,10 @@
 <script>
 	import Title from '$lib/title.svelte';
 	import { writingData } from '$lib/writing-data';
+
+	export function entries() {
+		return writingData.map((v) => ({ slug: v.path }));
+	}
 </script>
 
 <Title text="Writing" />

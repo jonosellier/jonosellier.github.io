@@ -15,6 +15,18 @@ const config = {
 		paths: {
 			base: process.env.NODE_ENV === "production" ? "" : "",
 		},
+	},
+	prerender: {
+		entries: [
+		"/",
+    "/about",
+    "/projects",
+    "/writing",
+    "/writing/happiest-communities-reddit",
+    "/writing/must-have-productivi",
+    "/writing/overlay-scrollbars",
+    "/writing/win-term",
+		]
 	}
 };
 
