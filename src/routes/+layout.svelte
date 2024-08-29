@@ -9,6 +9,9 @@
 	$: location = $page.url.pathname;
 </script>
 
+<svelte:head>
+	<title>JonoSellier | GitHub Pages</title>
+</svelte:head>
 <div class="text-white bg-gray-950 min-h-lvh">
 	<nav
 		class="fixed py-20 px-6 flex-grow-0 top-0 h-dvh me-10 left-0 w-56 bg-gray-950 border-r border-cyan-400 md:border-r-0 z-50 duration-200"
