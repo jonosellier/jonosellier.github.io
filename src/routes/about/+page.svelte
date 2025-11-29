@@ -120,8 +120,7 @@
 	</div>
 	<h2>Skills</h2>
 	<ul class="flex flex-wrap items-center">
-		{#each resume.skills as skill, i}
-			{#if i > 0}{/if}
+		{#each resume.skills as skill}
 			<li
 				class="flex items-center rounded px-2 py-1 m-1 bg-slate-900"
 				title={`Since ${skill.year}`}
@@ -137,10 +136,6 @@
 <style lang="postcss">
 	h2 {
 		@apply text-4xl font-bold mb-6 mt-12 text-cyan-400 uppercase;
-	}
-
-	.spacing {
-		letter-spacing: 2px;
 	}
 
 	p {

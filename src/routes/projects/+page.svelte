@@ -4,6 +4,61 @@
 
 <Title text="Projects" />
 <div class="project">
+	<h1>Playnite</h1>
+	<h2>Extensions, Themes, and Direct Contributions</h2>
+	<p>Built using WPF, and C#</p>
+	<p>
+		Playnite is a game library aggregator that combines PC games from multiple sources into a single
+		library. Beyond minor contributions to the core project, I've developed several extensions and
+		themes specifically designed to improve the PC gaming experience on Home Theatre PC and Handheld
+		PC form-factors.
+	</p>
+	<p>
+		I've also contributed to other community themes and extensions through both advisory support and
+		direct code contributions. While many of these projects began as improvements to my own gaming
+		setup, they've also served as valuable opportunities to maintain my .NET skills and expand into
+		Windows development. This has been a shift from my background in server-side applications and I
+		have come to appreciate the differing development processes.
+	</p>
+	<h3>Toggle</h3>
+	<p>
+		A Playnite Theme designed to work well on handheld devices with a number of tricks to make it
+		behave better with touchscreens, an input that the project never intended to target. It has
+		amassed thousands of downloads and has an active user base.
+	</p>
+	<h3>Now Playing</h3>
+	<p>
+		Using heuristic-based process tracking, this extension finds the currently running game's
+		process ID and allows users to easily return to their game session or exit the game via
+		Playnite's interface. This is crucial to HTPC and Handheld user flows as they do not have easy
+		access to <kbd>Alt</kbd>+<kbd>Tab</kbd> and <kbd>Alt</kbd>+<kbd>F4</kbd> shortcuts that most PC gamers
+		would be used to.
+	</p>
+	<h3>Mo' Data</h3>
+	<p>
+		Playnite doesn't provide out of the box support for certain system information like storage
+		usage and network info for permissions reasons. Mo' Data acts as an opt-in way of gathering
+		forwarding this information for other themes (including my own) to utilize in their UIs.
+	</p>
+	<h3 class="mt-8">Addon Links</h3>
+	<div class="mt-4 mb-4">
+		<a
+			class="btn"
+			href="https://playnite.link/addons.html#Toggle_28b7d2c0-105b-4632-8dca-d11348bd61d2">Toggle</a
+		>
+		<a
+			class="btn"
+			href="https://playnite.link/addons.html#NowPlaying_db4e7ade-57fb-426c-8392-60e2347a0209"
+			>Now Playing</a
+		>
+		<a
+			class="btn"
+			href="https://playnite.link/addons.html#MoData_5a0a672a-998a-4cf3-94ea-44543de5afcb"
+			>Mo Data</a
+		>
+	</div>
+</div>
+<div class="project">
 	<h1>Better Start</h1>
 	<h2>Custom New-Tab Page</h2>
 	<p>Built using SvelteKit and Tailwind CSS.</p>
