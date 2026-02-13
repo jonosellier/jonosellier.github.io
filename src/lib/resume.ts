@@ -85,9 +85,20 @@ export const resume = {
 	].sort(sortByDate),
 	professionalExperience: [
 		{
+			title: 'Senior Software Engineer',
+			employer: 'NVIDIA',
+			date: new DateRange(new Date('26 January 2026')),
+			details: [
+				"Frontend Engineer on the Air team, developing web-based interfaces for NVIDIA's data center network simulation platform.",
+				'Serve as Angular SME for the team',
+				'Working with Angular, TypeScript, Canvas API, and WebSocket technologies to build real-time data-center visualization and simulation tools.',
+				'Technologies: Angular, TypeScript, Cytoscape, HTML5, CSS3, Canvas API, RxJS, WebSockets, RESTful APIs'
+			]
+		},
+		{
 			title: 'Software Engineer',
 			employer: 'AdvancedMD',
-			date: new DateRange(new Date('1 December 2023')),
+			date: new DateRange(new Date('1 December 2023'), new Date('21 January 2026')),
 			details: [
 				'Maintain and develop both internal and customer-facing tools for one of the largest medical practice management software systems',
 				'Develop new features with strong coding practices, ensure adequate test coverage, and manage user stories from development to production',
